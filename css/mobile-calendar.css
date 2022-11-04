@@ -1,0 +1,106 @@
+/* screen - mobile-calendar */
+
+.mobile-calendar {
+  background-color: var(--white);
+  height: 2226px;
+  overflow: hidden;
+  position: relative;
+  width: 390px;
+}
+
+.mobile-calendar .calendar {
+  height: 80px;
+  left: 2px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 194px;
+  transform: rotate(-90deg);
+  width: 280px;
+}
+
+.mobile-calendar .line-1 {
+  height: 1656px;
+  left: 141px;
+  position: absolute;
+  top: 375px;
+  width: 2px;
+}
+
+.mobile-calendar .frame-8 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  height: min-content;
+  left: -51px;
+  padding: 200px 60px 0px;
+  position: absolute;
+  top: 187px;
+  width: min-content;
+}
+
+.mobile-calendar .frame {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  height: min-content;
+  justify-content: center;
+  padding: 24px 0px;
+  width: min-content;
+}
+
+.mobile-calendar .text {
+  letter-spacing: 0;
+  text-align: right;
+}
+
+.mobile-calendar .line-2 {
+  height: 2px;
+  min-width: 70px;
+}
+
+.mobile-calendar .volcat-btt-igualada-esp-p7 {
+  letter-spacing: 0;
+  margin-top: -1px;
+}
+
+.mobile-calendar .line-2-1 {
+  height: 3px;
+  min-width: 70px;
+}
+
+.mobile-calendar .frame-7 {
+  align-items: flex-end;
+  background-color: var(--mist-gray);
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  left: 0;
+  padding: 19px 20px;
+  position: fixed;
+  top: 0;
+  width: 390px;
+}
+
+.mobile-calendar .name {
+  letter-spacing: 2.88px;
+  text-align: center;
+}
+
+.mobile-calendar .frame-2 {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: min-content;
+  justify-content: center;
+  width: min-content;
+}
+
+.mobile-calendar .rectangle-1 {
+  background-color: var(--black);
+  height: 2px;
+  min-width: 30px;
+}

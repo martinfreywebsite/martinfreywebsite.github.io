@@ -1,0 +1,25 @@
+/* screen - success */
+
+.success {
+  background-color: var(--azure-radiance);
+  cursor: pointer;
+  display: flex;
+  height: 100vh;
+  min-height: 526px;
+  min-width: 791px;
+  width: 100%;
+}
+
+.success .thanks-for-your-message {
+  background-color: transparent;
+  border: 0;
+  height: 526px;
+  letter-spacing: 0;
+  padding: 0;
+  text-align: center;
+  width: 791px;
+}
+
+.success .thanks-for-your-message::placeholder {
+  color: #ffffff99;
+}
