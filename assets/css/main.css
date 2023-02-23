@@ -4450,7 +4450,6 @@ input, select, textarea {
 						#wrapper section.three_columns > header h3 {
 							top: 0;
 							left:0;
-							/* padding: 0.75rem; */
 						}
 
 						#wrapper > section.three_columns > header:before {
