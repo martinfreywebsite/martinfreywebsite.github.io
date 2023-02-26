@@ -2564,14 +2564,12 @@ input, select, textarea {
 		.image.logos {
 			display: block;
 			float: right;
-			margin-top: 5rem;
-			width: 10vw;
+			margin-top: 4rem;
 			
 		}
 
 			.image.logos img {
-				width: 10vw;
-				align-items: center;
+				width: 7rem;
 			}
 
 		.image.header {
