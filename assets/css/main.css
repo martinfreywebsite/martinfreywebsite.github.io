@@ -4525,7 +4525,7 @@ input, select, textarea {
 				/* grid-template-areas: "content content2"; */
 				grid-template-columns: 0fr 1fr 1fr;
 				grid-template-rows: 100%;
-				height: 7rem;
+				height: 5rem;
 				width: 100vw;
 			}
 			
@@ -4536,7 +4536,7 @@ input, select, textarea {
 				}
 
 					#wrapper > section.calendar > header:before {
-						height:7rem;
+						height:5rem;
 						left: 50vw;
 					}
 						#wrapper > section.calendar > header h1:before, #wrapper > section.calendar > header h2:before {
@@ -4638,6 +4638,8 @@ input, select, textarea {
 		
 		#wrapper > section.logos{
 			display: block;
+			padding-top: 3rem;
+			text-align: center;
 			width: 100vw;
 			background-color: var(--primary-color);
 			/* padding-left: calc(50vw - (7rem/2));
