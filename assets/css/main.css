@@ -2572,6 +2572,15 @@ input, select, textarea {
 				width: 7rem;
 			}
 
+		.image.logos_block {
+		}
+
+			.image.logos_block img {
+				width: 10rem;
+				padding:1rem;
+				
+			}
+
 		.image.header {
 			display: block;
 			margin-top: 10vh;
@@ -3874,7 +3883,10 @@ input, select, textarea {
 						padding: 5rem 5rem 0 5rem;
 						
 						}
-
+				
+				#wrapper > section.logos{
+					display: none;
+				}
 
 				#wrapper > section.pictures {
 					grid-template-columns: 33vw 67vw; /*war 50 50*/
@@ -4623,7 +4635,17 @@ input, select, textarea {
 				#wrapper > section.contact > footer > .items{
 					padding: 1rem;		
 				}
-				
+		
+		#wrapper > section.logos{
+			display: block;
+			width: 100vw;
+			background-color: var(--primary-color);
+			/* padding-left: calc(50vw - (7rem/2));
+			padding-right: calc(50vw - (7rem/2)); */
+			padding-left: 2rem;
+			padding-right: 2rem;
+			
+		}
 
 
 		}
