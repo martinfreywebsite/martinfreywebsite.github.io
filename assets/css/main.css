@@ -188,7 +188,8 @@ input, select, textarea {
 		transition: border-bottom-color 0.25s ease-in-out;
 		text-decoration: none;
 		color: #000000;
-		border-bottom: dotted 1px;
+		margin-top:0;
+		/* border-bottom: dotted 1px; */
 	}
 
 		a:hover {
@@ -208,6 +209,12 @@ input, select, textarea {
 	p {
 		text-align: block;
 		margin: 0 0 2rem 0;
+	}
+	result {
+		text-align: block;
+		margin: 0 0 2rem 0;
+		color:var(--primary-color);
+		
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3755,24 +3762,27 @@ input, select, textarea {
 								
 								left: calc(15vw - 2rem); 
 								/* calc(1.5rem - 2px); */
-								margin-top: -2.25rem;
+								/* margin-top: -2.25rem; */
+								top: 0.5rem;
 								width: 4rem;
 							}
 							
 							#wrapper > section.calendar > header h1:after, #wrapper > section.calendar > header h2:after {
-								width: 0;
-								height: 0;
+								display:none;
 							} 
 	
 	
 					#wrapper > section.calendar > .content {
 						padding: 0rem 3rem 0rem 0rem;
 						text-align: right;
+						height: 5rem;
+						top: calc(2.5rem - 0.5rem); /*center text vertically*/
 					}
 					#wrapper > section.calendar > .content2 {
 						padding: 0rem 0rem 0rem 3rem;
 						text-align: left;
-						color: white;
+						height: 5rem;
+						top: calc(2.5rem - 0.5rem);
 					}
 
 
@@ -4212,7 +4222,7 @@ input, select, textarea {
 
 
 	
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 1279px) { /*war 736px*/
 
 			#wrapper {
 				position: relative;
@@ -4523,6 +4533,7 @@ input, select, textarea {
 							left: calc(50vw + 1.5rem);
 							width: 3rem;
 							margin-left: -3rem; /*Margin zurücksetzen*/
+							top:0;
 						}
 
 
