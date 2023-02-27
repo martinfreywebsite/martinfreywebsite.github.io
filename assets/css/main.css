@@ -12,7 +12,8 @@
 	--primary-color: rgb(163, 188, 156);
 	/* --primary-color: #393939; */
 	--secondary-color: rgb(255, 255, 255);
-	--brightgrey: rgb(170, 170, 170);
+	--brightgrey: #cdcdcd; /*rgb(170, 170, 170);*/
+	--third-color: black;
 }
 
 
@@ -168,12 +169,12 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: #ffffff;
-		color: #000000;
+		background-color: white;
+		color: var(--third-color);
 	}
 
 	body, input, select, textarea {
-		color: #000000;
+		color: var(--third-color);
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 1rem;
 		font-weight: 300;
@@ -187,7 +188,7 @@ input, select, textarea {
 		-ms-transition: border-bottom-color 0.25s ease-in-out;
 		transition: border-bottom-color 0.25s ease-in-out;
 		text-decoration: none;
-		color: #000000;
+		color: var(--third-color);
 		margin-top:0;
 		/* border-bottom: dotted 1px; */
 	}
@@ -199,7 +200,7 @@ input, select, textarea {
 
 	strong, b {
 		font-weight: 600;
-		color: #000000;
+		color: var(--third-color);
 	}
 
 	em, i {
@@ -218,7 +219,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #000000;
+		color: var(--third-color);
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-weight: 600;
 		letter-spacing: 0.175em;
@@ -1882,7 +1883,7 @@ input, select, textarea {
 		border-radius: 0.325rem;
 		border: 0;
 		box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
-		color: #000000 !important;
+		color: var(--third-color) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-family: "Raleway", Helvetica, sans-serif;
@@ -1983,7 +1984,7 @@ input, select, textarea {
 		.button.primary {
 			background-color: var(--primary-color);
 			box-shadow: none;
-			color: #000000 !important;
+			color: var(--third-color) !important;
 		}
 
 			input[type="submit"].primary:hover,
@@ -2150,7 +2151,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #000000;
+		color: var(--third-color);
 		display: block;
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.75rem;
@@ -2183,7 +2184,7 @@ input, select, textarea {
 
 		select option {
 			background-color: #ffffff;
-			color: #000000;
+			color: var(--third-color);
 		}
 
 		select:focus::-ms-value {
@@ -2215,7 +2216,7 @@ input, select, textarea {
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #000000;
+			color: var(--third-color);
 			cursor: pointer;
 			display: inline-block;
 			font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -2621,6 +2622,216 @@ input, select, textarea {
 
 	}
 
+/* Burger Menu */
+
+ #menuToggle
+ {
+   display: block;
+   position: fixed;
+   /* Position of burger */
+   top: 2rem;
+   left: calc(100vw - 40px - 2rem);
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: black;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: var(--primary-color);
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: black;
+   border-radius: 3px;
+   
+   z-index: 2;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+			   background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+			   opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: black;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position:fixed;
+   width: 25vw;
+   height: calc(100vh + 100px);
+   /* margin so it lies underneath burger */
+   margin: -100px 0 0 -200px;
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+/* BURGER MENU MOBILE */
+
+@media screen and (max-width: 1279px) {
+
+	#menuToggle
+	{
+	  display: block;
+	  position: fixed;
+	  /* Position of burger */
+	  top: 1rem;
+	  left: calc(100vw - 40px - 1rem);
+	  
+	  z-index: 1;
+	  
+	  -webkit-user-select: none;
+	  user-select: none;
+	}
+	
+	
+	/*
+	 * Make this absolute positioned
+	 * at the top left of the screen
+	 */
+	#menu
+	{
+	  position: fixed;
+	  width: 50vw;
+	  height: calc(60vh + 100px);
+	  /* margin so it lies underneath burger */
+	  margin: -100px 0 0 -90px;
+	  padding: 20px;
+	  padding-top: 125px;
+	  
+	  /* background: #ededed; */
+	  background: #c96464;
+	  list-style-type: none;
+	  -webkit-font-smoothing: antialiased;
+	  /* to stop flickering of text in safari */
+	  
+	  transform-origin: 0% 0%;
+	  transform: translate(100%, 0);
+	  
+	  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	  z-index: -3;
+	}
+	
+	#menu li
+	{
+	  padding: 10px 0;
+	  font-size: 16px;
+	  color: white;
+	}
+	
+	/*
+	 * And let's slide it in from the left
+	 */
+	#menuToggle input:checked ~ ul
+	{
+	  transform: none;
+	}
+
+}
+
 
 /* List */
 
@@ -2662,8 +2873,7 @@ input, select, textarea {
 				/* background-color: var(--primary-color); */
 				/* background-color: rgb(206, 219, 203); */
 				background-color: whitesmoke;
-				color: rgb(0, 0, 0); 
-				
+				color: rgb(0, 0, 0); 				
 			}
 
 				ul.alt > li:first-child {
@@ -2674,6 +2884,7 @@ input, select, textarea {
 				ul.alt > li:last-child {
 					padding-bottom: 0;
 				}
+		
 
 		ul.items {
 			list-style: none;
@@ -2699,10 +2910,17 @@ input, select, textarea {
 					margin-bottom: 0;
 				}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 1279px) {
 
 			ul.items > li {
 				margin: 0 0 2rem 0;
+			}
+
+			ul.alt > li > marker{		
+				
+				background-color: #c96464;
+				/* background-color: var(--primary-color); */
+				color: black;		
 			}
 
 		}
@@ -2908,7 +3126,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #000000;
+			color: var(--third-color);
 			font-size: 0.9rem;
 			font-weight: 600;
 			padding: 0 0.75rem 0.75rem 0.75rem;
@@ -3296,7 +3514,7 @@ input, select, textarea {
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
-				color: #000000;
+				color: var(--third-color);
 				display: block;
 				font-size: 1.25rem;
 				height: 3.25rem;
@@ -3342,7 +3560,7 @@ input, select, textarea {
 			background-attachment: fixed;
 			background-color: var(--primary-color);
 
-			background-image: url("/background3.jpg");
+			background-image: url("background3.jpg");
 			background-position: -50% 50%;
 			background-size: 75% auto;
 			
@@ -3354,7 +3572,6 @@ input, select, textarea {
 			top: 0;
 			width: 33vw; /*war 50vw*/
 			z-index: 0;
-			z-index:-1;
 		}
 
 
@@ -3419,7 +3636,7 @@ input, select, textarea {
 
 			#wrapper > section > header:before {
 				/*Vertikale Linie*/
-				background: #000000;
+				background: var(--third-color);
 				content: '';
 				display: block;
 				/* margin-top: 1rem; */
@@ -3434,7 +3651,7 @@ input, select, textarea {
 
 				#wrapper > section > header h1:before, #wrapper > section > header h2:before {
 					/* horizontale Linie*/
-					background: #000000;
+					background: var(--third-color);
 					content: '';
 					display: block;
 					position: absolute;
@@ -3448,7 +3665,7 @@ input, select, textarea {
 				#wrapper > section > header h1:after, #wrapper > section > header h2:after {
 					/*Kreis an horizontaler Linie*/
 					
-					background: #000000;
+					background: var(--third-color);
 					border-radius: 0.5rem;
 					content: '';
 					display: block;
@@ -3651,7 +3868,6 @@ input, select, textarea {
 							height: 60vh;
 							max-width: none;
 							padding-top: 10%;
-							
 							}
 
 
@@ -3661,7 +3877,7 @@ input, select, textarea {
 				grid-template-columns: 33vw 67vw; /*war 50 50*/
 				grid-template-rows: 1fr; /*10% der Bildschirmhöhe*/
 				/* align-items: center; */
-				align-items: center;
+				/* align-items: center; */
 			}
 			
 				#wrapper section.title > header {
@@ -3678,12 +3894,6 @@ input, select, textarea {
 						right: -5rem;
 					}
 
-						#wrapper > section.title > header h1:before, #wrapper > section.title > header h2:before {
-							
-							/* right: -5rem;
-							width: 3rem;
-							top: calc(10vh + 0.8rem - 1px); */
-						}
 
 						#wrapper > section.title > header h1:after, #wrapper > section.title > header h2:after {
 							margin-left: calc(23vw + 0.35rem);
@@ -4250,7 +4460,7 @@ input, select, textarea {
 
 
 				#wrapper > section > header {
-					z-index: 2;
+					z-index: 0;
 					
 				}
 
@@ -4293,9 +4503,10 @@ input, select, textarea {
 					top: 0;
 					left: 0;
 					width: 100vw;
-					height: calc(2rem + 2rem + (0.3 * 2rem) + 0.8rem + 2rem - 0.8rem); /* padding + h1 + linehight_h1 + p + padding - linehight_p*/
+					height: calc(2rem + 2rem + (0.3 * 2rem) + 0.8rem + 4rem - 0.8rem); /* padding + h1 + linehight_h1 + p + padding - linehight_p*/
 					-webkit-text-fill-color: #ffffff;
 					background-color: var(--brightgrey);
+					padding-top: 2rem;
 					
 				}
 
@@ -4314,6 +4525,7 @@ input, select, textarea {
 
 				#wrapper > section.title > .content {
 					height: 100vh;
+					z-index: -1;
 					}
 
 
@@ -4376,7 +4588,7 @@ input, select, textarea {
 					left: 0;
 					width: 100vw;
 					height: 3rem;
-					-webkit-text-fill-color: #000000;
+					-webkit-text-fill-color: var(--third-color);
 					background-color: rgb(255, 255, 255);
 					}
 
@@ -4432,12 +4644,12 @@ input, select, textarea {
 						left: 0;
 						width: 100vw;
 						height: 100vh;
-						-webkit-text-fill-color: black;
+						-webkit-text-fill-color: var(--third-color);
 						background-color: var(--brightgrey);
 						text-align: left;
 						padding-left: 3rem;
 						padding-right: 3rem;
-						background-image: url("/background3.jpg");
+						background-image: url("background3.jpg");
 						background-position: -50% 50%;
 						background-size: 75% auto;
 						padding-top: 3rem;
@@ -4475,9 +4687,11 @@ input, select, textarea {
 	
 					#wrapper > section.three_columns > .content {
 						height: 100vh;
+						display:none;
 						}
 					#wrapper > section.three_columns > .content2 {
 						height: 100vh;
+						display:none;
 						}
 
 			

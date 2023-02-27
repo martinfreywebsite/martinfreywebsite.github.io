@@ -5,8 +5,9 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+
 	<head>
-		<title>Paradigm Shift by HTML5 UP</title>
+		<title>Martin Frey</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -15,14 +16,50 @@
 	</head>
 	<body class="is-preload">
 
+		<!-- Burger Menu -->
+		<nav role="navigation">
+			<div id="menuToggle">
+			<!--
+			A fake / hidden checkbox is used as click reciever,
+			so you can use the :checked selector on it.
+			-->
+			<input type="checkbox" />
+			
+			<!--
+			Some spans to act as a hamburger.
+			
+			They are acting like a real hamburger,
+			not that McDonalds stuff.
+			-->
+			<span></span>
+			<span></span>
+			<span></span>
+			
+			<!--
+			Too bad the menu has to be inside of the button
+			but hey, it's pure CSS magic.
+			-->
+			<ul id="menu">
+				<a href="#home"><li>HOME</li></a>
+				<a href="#news"><li>NEWS</li></a>
+				<a href="#about"><li>ABOUT</li></a>
+				<a href="#palmares"><li>PALMARES</li></a>
+				<a href="#calendar"><li>CALENDAR</li></a>
+				<a href="#gallery"><li>GALLERY</li></a>
+				<a href="#contact"><li>CONTACT</li></a>
+			</ul>
+			</div>
+		</nav>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+				
 				<!-- Intro -->
-					<section class="title">
+					<section id="home" class="title">
+						
 						<header>
-							<h1>Martin
-								Frey</h1>
+							<h1 style="text-align:right;">Martin Frey</h1>
+							
 							<p>Professional Mountainbiker <p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
@@ -32,8 +69,9 @@
 							<span class="image fill" data-position="center"><img src="./images/title.jpg" alt="" /></span>
 						</div>
 					</section>
-				
-					<section class="feed">
+					
+					<section id="news" class="feed">
+						
 						<header>
 							<h2>news</h2>
 							<h4><br/><br/> news and recent stories from my life as a pro cyclist </h4>
@@ -48,7 +86,9 @@
 
 					
 				<!-- About -->
+				<a id="about"></a>
 				<section class="one_column">
+					
 					<header>
 						<h2>about</h2>
 						<h3><br/><br/><br/> Thanks to my partners and sponsers that make this journey possible! <br/>
@@ -114,7 +154,8 @@
 					</div>
 				</section>
 
-				<section class="three_columns">
+				<section id="palmares" class="three_columns">
+					
 					<header>
 						<h2>Palmares</h2>
 						<h3>
@@ -148,7 +189,9 @@
 
 
 				<!-- Calendar -->
-				<section class="calendar_start">
+				
+				<section id="calendar" class="calendar_start">
+					
 					<header>
 						<h2>calendar</h2>
 					</header>
@@ -416,34 +459,35 @@
 
 
 
+				<section id="gallery" class="pictures">
 					
-					<section class="pictures">
-						<header>
-							<h2>Gallery</h2>
-							<h4><br/><br/> impressions <br/>of my last races </h4>
+					<header>
+						<h2>Gallery</h2>
+						<h4><br/><br/> impressions <br/>of my last races </h4>
 
-						</header>
-						<div class="content">
+					</header>
+					<div class="content">
 
-							 
-								<section>
-									<header>
-									</header>
-									<div class="content">
-										<div class="gallery">
-											<a href="./images/gallery1.jpg" class="landscape"><img src="./images/gallery1.jpg" alt="" /></a>
-											<a href="./images/gallery2.jpg"><img src="./images/gallery2.jpg" alt="" /></a>
-											<a href="./images/gallery3.jpg"><img src="./images/gallery3.jpg" alt="" /></a>
-											<!-- <a href="./images/gallery/fulls/04.jpg" class="landscape"><img src="./images/gallery/thumbs/04.jpg" alt="" /></a> -->
-										</div>
+							
+							<section>
+								<header>
+								</header>
+								<div class="content">
+									<div class="gallery">
+										<a href="./images/gallery1.jpg" class="landscape"><img src="./images/gallery1.jpg" alt="" /></a>
+										<a href="./images/gallery2.jpg"><img src="./images/gallery2.jpg" alt="" /></a>
+										<a href="./images/gallery3.jpg"><img src="./images/gallery3.jpg" alt="" /></a>
+										<!-- <a href="./images/gallery/fulls/04.jpg" class="landscape"><img src="./images/gallery/thumbs/04.jpg" alt="" /></a> -->
 									</div>
-								</section>
-							</div>
-						</section>
+								</div>
+							</section>
+						</div>
+					</section>
 					
 
 				<!-- Section -->
-					<section class="contact">
+					<section id="contact" class="contact">
+						
 						<header>
 							<h2>Get in touch</h2>
 						</header>
@@ -537,6 +581,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+			<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
 
 	</body>
 </html>
