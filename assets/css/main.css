@@ -2605,8 +2605,8 @@ input, select, textarea {
 			/* Padding ausgleichen*/
 			width: 110vw;
 			left: -10vw; 
-			top: -3rem; /*Anfagen nach header*/
-			margin-bottom: 0;
+			top: -5rem; /*Anfagen nach header*/
+			margin-bottom: -4rem;
 		}
 		
 		.image.main_full {
@@ -3641,7 +3641,7 @@ input, select, textarea {
 				display: block;
 				/* margin-top: 1rem; */
 				position: absolute;
-				right: 5rem;
+				/* right: 5rem; */
 				width: 2px;
 			}
 
@@ -3712,23 +3712,27 @@ input, select, textarea {
 			}
 
 				#wrapper section.three_columns > header {
-					position: absolute;
-					right: 5rem;
+					/* position: absolute; */
+					margin-right: 5rem;
+					/* margin-top: -5rem; */
+					/* right: 5rem; */
 					top: 0vh;
 					max-width: none;
-					height: 100vh;
+					/* height: 100vh; */
+					padding-bottom: 2rem;
 				}
 					
 					#wrapper > section.three_columns > header h2 {
 					/* position of header text */
 					/*top: calc(50vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
-					right: 5rem;
+					/* margin-right: 5rem; */
+					margin-right: 5rem;
 					top:10vh;
 					}
 
 					#wrapper > section.three_columns > header:before {
 						height: calc(120vh - 2px);
-						right: 0rem;
+						margin-left: calc(33vw - 5rem - 2px);
 					}
 
 						#wrapper > section.three_columns > header h1:before, #wrapper > section > header h2:before {
@@ -3865,9 +3869,9 @@ input, select, textarea {
 		
 		
 						#wrapper > section.feed > .content {
-							height: 60vh;
+							/* height: 60vh; */
 							max-width: none;
-							padding-top: 10%;
+							/* padding-top: 10%; */
 							}
 
 
@@ -3881,7 +3885,7 @@ input, select, textarea {
 			}
 			
 				#wrapper section.title > header {
-					position: absolute;
+					/* position: absolute; */
 					right: 10rem;	/*gleich wie bei anderen Headnern*/
 					left: 1rem;
 					top: 30vh;				
@@ -3913,12 +3917,11 @@ input, select, textarea {
 				grid-template-columns: 60vw 40vw; /*war 50 50*/
 				grid-template-rows: 50vh; /*10% der Bildschirmhöhe*/
 				align-items: center;
-				margin-top: 15vh;
 			}
 			
 				#wrapper section.calendar_start > header {
 					writing-mode: vertical-rl;
-					margin-top: 10vh;
+					margin-top: 1rem;
 				}
 
 					#wrapper > section.calendar_start > header:before {
@@ -3942,7 +3945,6 @@ input, select, textarea {
 				#wrapper > section.calendar_start > .content {
 					height: 50vh;
 				}
-
 
 
 				#wrapper > section.calendar{
@@ -4132,6 +4134,13 @@ input, select, textarea {
 						}
 
 
+
+
+			#wrapper > section.copyright {
+				display: block;
+				width: calc(33vw - 5rem);
+				text-align: right;
+			}
 
 
 
@@ -4488,7 +4497,7 @@ input, select, textarea {
 					
 
 				#wrapper > section > .content {
-					padding: 1rem;
+					/* padding: 1rem; */
 				}
 				
 
@@ -4524,7 +4533,7 @@ input, select, textarea {
 
 
 				#wrapper > section.title > .content {
-					height: 100vh;
+					height: calc(100vh - (2rem + 2rem + (0.3 * 2rem) + 0.8rem + 4rem - 0.8rem));
 					z-index: -1;
 					}
 
@@ -4534,7 +4543,6 @@ input, select, textarea {
 				
 				#wrapper > section.feed{
 					height: fit-content;
-					
 				}
 				
 					#wrapper section.feed > header {
@@ -4571,16 +4579,16 @@ input, select, textarea {
 							}
 	
 					#wrapper > section.feed > .content {
-						margin-top: 1rem;
-						left: -1rem;
-						width: calc(100vw + 1rem);
+						width:100vw;
+						margin-top: 3rem;
 						background-color: var(--primary-color);
 						}
 
 				/* ONE_COLUMN */
 
 				#wrapper > section.one_column{
-					height: 200vh;
+					/* height: 200vh; */
+					display: inline-block;
 				}
 				
 					#wrapper section.one_column > header {
@@ -4621,7 +4629,8 @@ input, select, textarea {
 	
 					#wrapper > section.one_column > .content {
 						width: 100vw;
-						height: 310vh;
+						/* height: 310vh; */
+						margin-top: 3rem;
 						background-color: var(--brightgrey);
 						-webkit-text-fill-color: white;
 						text-align: left;
@@ -4632,18 +4641,21 @@ input, select, textarea {
 				/* THREE_COLUMNS */
 
 				#wrapper > section.three_columns{
-					height: 100vh;
-					top:0;
-					display: grid;
+					/* height: 100vh; */
+					/* top:0; */
+					display: inline-block;
+					/* margin-bottom: 10rem; */
+					/* display: grid;
 					grid-template-columns: 1fr;
-					grid-template-rows: 1fr 0fr 0fr;
+					grid-template-rows: 1fr 0fr 0fr; */
 				}
 				
 					#wrapper section.three_columns > header {
+						
 						top: 0;
 						left: 0;
 						width: 100vw;
-						height: 100vh;
+						/* height: 100vh; */
 						-webkit-text-fill-color: var(--third-color);
 						background-color: var(--brightgrey);
 						text-align: left;
@@ -4668,8 +4680,10 @@ input, select, textarea {
 							text-transform: uppercase;
 						}
 						#wrapper section.three_columns > header h3 {
+							
 							top: 0;
 							left:0;
+
 						}
 
 						#wrapper > section.three_columns > header:before {
@@ -4686,11 +4700,11 @@ input, select, textarea {
 	
 	
 					#wrapper > section.three_columns > .content {
-						height: 100vh;
+						
 						display:none;
 						}
 					#wrapper > section.three_columns > .content2 {
-						height: 100vh;
+						
 						display:none;
 						}
 
@@ -4836,7 +4850,7 @@ input, select, textarea {
 
 			#wrapper > section.contact > footer {
 					display: block;
-					margin-top: 40vh;
+					margin-top:  10rem;
 					text-align: center;				
 				}
 				#wrapper > section.contact > footer > .items{
@@ -4854,6 +4868,14 @@ input, select, textarea {
 			padding-left: 2rem;
 			padding-right: 2rem;
 			
+		}
+
+		#wrapper > section.copyright {
+			display: block;
+			width: 100vw;
+			text-align: center;
+			padding: 0.5rem;
+			-webkit-text-fill-color: var(--primary-color);
 		}
 
 
