@@ -2769,6 +2769,8 @@ input, select, textarea {
    transform: none;
  }
 
+ 
+
 /* BURGER MENU MOBILE */
 
 @media screen and (max-width: 1279px) {
@@ -2918,7 +2920,8 @@ input, select, textarea {
 
 			ul.alt > li > marker{		
 				
-				background-color: #c96464;
+				/* background-color: #c96464; */
+				background-color: whitesmoke;
 				/* background-color: var(--primary-color); */
 				color: black;		
 			}
@@ -4140,6 +4143,7 @@ input, select, textarea {
 				display: block;
 				width: calc(33vw - 5rem);
 				text-align: right;
+				z-index: 2;
 			}
 
 
