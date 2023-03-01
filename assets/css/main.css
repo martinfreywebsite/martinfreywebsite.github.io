@@ -14,6 +14,7 @@
 	--secondary-color: rgb(255, 255, 255);
 	--brightgrey: #cdcdcd; /*rgb(170, 170, 170);*/
 	--third-color: black;
+	--red-color: #c96464;
 }
 
 
@@ -2040,7 +2041,8 @@ input, select, textarea {
 /* Form */
 
 	form {
-		position: absolute;
+		/* position: absolute; */
+		position: relative;
 	}
 
 		form > :last-child {
@@ -2805,7 +2807,7 @@ input, select, textarea {
 	  padding-top: 125px;
 	  
 	  /* background: #ededed; */
-	  background: #c96464;
+	  background: var(--red-color);
 	  list-style-type: none;
 	  -webkit-font-smoothing: antialiased;
 	  /* to stop flickering of text in safari */
@@ -3717,12 +3719,12 @@ input, select, textarea {
 				#wrapper section.three_columns > header {
 					/* position: absolute; */
 					margin-right: 5rem;
-					/* margin-top: -5rem; */
+					margin-top: 5rem;
 					/* right: 5rem; */
 					top: 0vh;
 					max-width: none;
 					/* height: 100vh; */
-					padding-bottom: 2rem;
+					padding-left: 1rem;
 				}
 					
 					#wrapper > section.three_columns > header h2 {
@@ -3733,9 +3735,16 @@ input, select, textarea {
 					top:10vh;
 					}
 
+					#wrapper > section.three_columns > header h2 {
+						top: 3rem;
+					}
+
 					#wrapper > section.three_columns > header:before {
-						height: calc(120vh - 2px);
-						margin-left: calc(33vw - 5rem - 2px);
+						top: calc(7rem + 10vh + 1.25rem);
+						/* height: calc(80vh); */
+						height: calc(100% - 7rem - 10vh - 1.25rem);
+						left: calc(33vw - 5rem - 2px);
+						/* margin-left: calc(33vw - 5rem - 2px); */
 					}
 
 						#wrapper > section.three_columns > header h1:before, #wrapper > section > header h2:before {
@@ -3798,15 +3807,25 @@ input, select, textarea {
 					right: 10rem;
 					top: 0vh;
 					max-width: none;
+					padding-left: 1rem;
 				}
 					#wrapper > section.one_column > header h2 {
-					/* position of header text */
-					top: calc(25vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
+						/* position of header text */
+						/*top: calc(25vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
+						top:0;
+						margin-bottom: 0;
 					}
+					
+					#wrapper > section.one_column > header h4 {
+						padding-top: 1rem;
+					}
+
 
 					#wrapper > section.one_column > header:before {
 						margin-top: -5rem;
-						height: calc(350vh + 5rem + 2px);
+						/* height: calc(100% + 25vh - 1.5rem + 10vh + 5rem); */
+						height: calc(100% + 5rem + (0.75 * 67vw));
+						/* height: calc(350vh + 5rem + 2px); */
 						right: -5rem;
 					}
 
@@ -3830,8 +3849,13 @@ input, select, textarea {
 					max-width: none;
 					padding-left: 5rem;
 					padding-right: 5rem;
-					padding-top: 5rem;
+					padding-top: 1rem;
+					height:100%;
 					}
+
+
+
+
 
 
 					#wrapper > section.feed {
@@ -3845,10 +3869,16 @@ input, select, textarea {
 							right: 10rem;
 							top: 0vh;
 							max-width: none;
+							padding-left: 1rem;
 						}
 							#wrapper > section.feed > header h2 {
-							/* position of header text */
-							top: calc(25vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
+								/* position of header text */
+								/*top: calc(25vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
+								top:0;
+								margin-bottom: 0;
+							}
+							#wrapper > section.feed > header h4 {
+								padding-top: 1rem;
 							}
 		
 							#wrapper > section.feed > header:before {
@@ -3888,22 +3918,32 @@ input, select, textarea {
 			}
 			
 				#wrapper section.title > header {
-					/* position: absolute; */
-					right: 10rem;	/*gleich wie bei anderen Headnern*/
-					left: 1rem;
-					top: 30vh;				
-					max-width: none;
+					position: absolute;
+					/*right: 10rem;	/*gleich wie bei anderen Headnern*/
+					/* left: 1rem; */
+					/* top: 30vh;				 */
+					height: 100vh;
+					
 				}
-
-					#wrapper > section.title > header:before {
-						height: calc(70vh - 2.5rem);
-						top: 5.5rem; /*hälfte von Schriftgröße 5rem*/
-						right: -5rem;
+					#wrapper section.title > header > h1 {
+						margin-right: 7rem;
+						margin-top: calc(30vh - 2.5rem);
 					}
 
+					#wrapper section.title > header > p {
+						margin-right: 7rem;
+						/* width: calc(33vw - 7rem); */
+					}
 
+					#wrapper > section.title > header:before {
+						/* Vertical Line */
+						height: calc(70vh - 2.5rem);
+						margin-top: calc(30vh + 3rem);
+						right: 5rem;
+					}
+					
 						#wrapper > section.title > header h1:after, #wrapper > section.title > header h2:after {
-							margin-left: calc(23vw + 0.35rem);
+							right: calc(-1.25rem - 1rem + 1px);
 							top: 5.5rem;
 						} 
 
@@ -3918,25 +3958,27 @@ input, select, textarea {
 		
 			#wrapper > section.calendar_start{
 				grid-template-columns: 60vw 40vw; /*war 50 50*/
-				grid-template-rows: 50vh; /*10% der Bildschirmhöhe*/
+				/*grid-template-rows: 50vh; /*10% der Bildschirmhöhe*/
 				align-items: center;
 			}
 			
 				#wrapper section.calendar_start > header {
 					writing-mode: vertical-rl;
-					margin-top: 1rem;
+					/* margin-top: 1rem; */
+					margin-top: 5rem;
 				}
+					
 
 					#wrapper > section.calendar_start > header:before {
-						height: 10vh;
-						top: -5vh;
+						height: 3rem;
+						top: 0;
 						left: calc(60vw - 1.5rem);
 					}
 
 						#wrapper > section.calendar_start > header h1:before, #wrapper > section.calendar_start > header h2:before {
-							width: calc(60vw - 33vw + 3.75rem);
-							margin-right: calc(6.5rem - 2px);
-							top: -4.5rem;
+							width: calc(60vw - 33vw + 3.75rem - 4px);
+							margin-right: calc(6.5rem);
+							top: -5rem;
 						}
 
 						#wrapper > section.calendar_start > header h1:after, #wrapper > section.calendar_start > header h2:after {
@@ -3944,9 +3986,8 @@ input, select, textarea {
 							height: 0;
 						} 
 
-
 				#wrapper > section.calendar_start > .content {
-					height: 50vh;
+					/* height: 50vh; */
 				}
 
 
@@ -4044,26 +4085,28 @@ input, select, textarea {
 
 				#wrapper > section.contact {
 					grid-template-columns: 33vw 67vw; /*war 50 50*/
-					grid-template-rows: 50vh; /*10% der Bildschirmhöhe*/
+					/*grid-template-rows: 50vh; /*10% der Bildschirmhöhe*/
 					align-items: center;
+					margin-top: 5rem;
 				}
 				
 					#wrapper section.contact > header {
 						position: absolute;
 						right: 10rem;
-						top: 0vh;
-						height: 10vh;
-						max-width: none;
+						top:0;
 					}
 						#wrapper > section.contact > header h2 {
-						/* position of header text */
-						top: calc(25vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
+							/* position of header text */
+							/*top: calc(25vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
+							top:0;
+							margin-bottom: 0;
 						}
 	
 						#wrapper > section.contact > header:before {
 							margin-top: calc(-5rem);
-							height: calc(25vh + 5rem - 2px);
+							/* height: calc(25vh + 5rem - 2px); */
 							right: -5rem;
+							height: calc(6.25rem);
 						}
 	
 							#wrapper > section.contact > header h1:before, #wrapper > section.contact > header h2:before {
@@ -4078,14 +4121,22 @@ input, select, textarea {
 								height: 0.5rem;
 								right: -2.5rem;
 							}
-	
+
+					#wrapper section.contact > footer {
+						margin-top: 0rem;
+					}
 	
 					#wrapper > section.contact > .content {
-						height: 50vh;
+						/* height: 50vh; */
+						top:0;
 						max-width: none;
 						/* padding: 1rem 5rem 0 4rem; */
 						
 						}
+
+
+
+
 				
 				#wrapper > section.logos{
 					display: none;
@@ -4093,9 +4144,8 @@ input, select, textarea {
 
 				#wrapper > section.pictures {
 					grid-template-columns: 33vw 67vw; /*war 50 50*/
-					grid-template-rows: 100vh; /*10% der Bildschirmhöhe*/
+					/*grid-template-rows: 100vh; /*10% der Bildschirmhöhe*/
 					align-items: center;
-					margin-bottom: 10rem;
 				}
 				
 					#wrapper section.pictures > header {
@@ -4103,15 +4153,23 @@ input, select, textarea {
 						right: 10rem;
 						top: 0vh;
 						max-width: none;
+						padding-left: 1rem;
+						height: 200%;
 					}
 						#wrapper > section.pictures > header h2 {
-						/* position of header text */
-						top: calc(25vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
+							/* position of header text */
+							/*top: calc(25vh - 1.5rem); /*shift by half of text size to have text in middle + set to middle*/
+							top:0;
+							margin-bottom: 0;
+						}
+						
+						#wrapper > section.pictures > header h4 {
+							padding-top: 1rem;
 						}
 	
 						#wrapper > section.pictures > header:before {
 							margin-top: -5rem;
-							height: calc(100vh + 5rem + 10rem);
+							height: calc(100% + 5rem);
 							right: -5rem;
 						}
 	
@@ -4130,9 +4188,12 @@ input, select, textarea {
 	
 	
 					#wrapper > section.pictures > .content {
-						height: 100vh;
+						/* height: 100vh; */
 						max-width: none;
-						padding: 10%;
+						/* padding: 10%; */
+						padding-left: 1.5rem;
+						padding-right: 1.5rem;
+						margin-top: 1rem;
 						
 						}
 
@@ -4513,6 +4574,7 @@ input, select, textarea {
 			}
 			
 				#wrapper section.title > header {
+					position: absolute;
 					top: 0;
 					left: 0;
 					width: 100vw;
@@ -4522,6 +4584,15 @@ input, select, textarea {
 					padding-top: 2rem;
 					
 				}
+					#wrapper > section.title > header > h1{
+						margin: 0; /* reset margin of normal title page*/
+					}
+					#wrapper > section.title > header > p{
+						margin: 0; /* reset margin of normal title page*/
+						width: 100vw;
+						padding-top: 1rem;
+					}
+
 
 					#wrapper > section.title > header:before {
 						/* keine vertikale Linie */
@@ -4546,7 +4617,8 @@ input, select, textarea {
 				/* FEED */
 				
 				#wrapper > section.feed{
-					height: fit-content;
+					position: relative;
+					
 				}
 				
 					#wrapper section.feed > header {
@@ -4596,12 +4668,14 @@ input, select, textarea {
 				}
 				
 					#wrapper section.one_column > header {
+					position: relative;
 					top: 0;
 					left: 0;
 					width: 100vw;
 					height: 3rem;
 					-webkit-text-fill-color: var(--third-color);
 					background-color: rgb(255, 255, 255);
+					z-index: 1;
 					}
 
 					#wrapper section.one_column > header h2 {
@@ -4615,7 +4689,7 @@ input, select, textarea {
 						text-transform: uppercase;
 						text-align: center;
 					}
-					#wrapper section.one_column > header h3 {
+					#wrapper section.one_column > header h4 {
 						display: none;
 					}
 					#wrapper section.one_column > header bilder {
@@ -4652,11 +4726,12 @@ input, select, textarea {
 					/* display: grid;
 					grid-template-columns: 1fr;
 					grid-template-rows: 1fr 0fr 0fr; */
+					
 				}
 				
 					#wrapper section.three_columns > header {
 						
-						top: 0;
+						margin-top: 0rem;
 						left: 0;
 						width: 100vw;
 						/* height: 100vh; */
@@ -4669,6 +4744,7 @@ input, select, textarea {
 						background-position: -50% 50%;
 						background-size: 75% auto;
 						padding-top: 3rem;
+						padding-bottom: 3rem;
 						
 					}
 
@@ -4682,11 +4758,13 @@ input, select, textarea {
 							letter-spacing: 0.175em;
 							line-height: 100%;
 							text-transform: uppercase;
+							margin: 0;
 						}
-						#wrapper section.three_columns > header h3 {
+						#wrapper section.three_columns > header h4 {
 							
-							top: 0;
+							margin-top: 1rem;
 							left:0;
+							margin-bottom: 1rem;
 
 						}
 
@@ -4802,6 +4880,7 @@ input, select, textarea {
 			#wrapper > section.contact {
 				display: block;
 				align-items: center;
+				margin-top:0;
 			}
 			
 			#wrapper section.contact > header {
@@ -4854,7 +4933,7 @@ input, select, textarea {
 
 			#wrapper > section.contact > footer {
 					display: block;
-					margin-top:  10rem;
+					margin-top:  4rem;
 					text-align: center;				
 				}
 				#wrapper > section.contact > footer > .items{
