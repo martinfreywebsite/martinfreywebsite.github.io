@@ -13,44 +13,96 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="assets/js/project.js" defer></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 	</head>
+
+
+		
+	
 	<body class="is-preload">
 
-		<!-- Burger Menu -->
-		<nav role="navigation">
-			<div id="menuToggle">
-			<!--
-			A fake / hidden checkbox is used as click reciever,
-			so you can use the :checked selector on it.
-			-->
-			<input type="checkbox" />
+		
 			
-			<!--
-			Some spans to act as a hamburger.
-			
-			They are acting like a real hamburger,
-			not that McDonalds stuff.
-			-->
-			<span></span>
-			<span></span>
-			<span></span>
-			
-			<!--
-			Too bad the menu has to be inside of the button
-			but hey, it's pure CSS magic.
-			-->
-			<ul id="menu">
-				<a href="#home"><li>HOME</li></a>
-				<a href="#news"><li>NEWS</li></a>
-				<a href="#about"><li>ABOUT</li></a>
-				<a href="#palmares"><li>PALMARES</li></a>
-				<a href="#calendar"><li>CALENDAR</li></a>
-				<a href="#gallery"><li>GALLERY</li></a>
-				<a href="#contact"><li>CONTACT</li></a>
-			</ul>
-			</div>
+			<!-- Burger Menu -->
+			<div id="menuToggle" >
+				<!-- <div id="menuToggle"> -->
+				<!--
+				A fake / hidden checkbox is used as click reciever,
+				so you can use the :checked selector on it.
+				-->
+				<!-- <input type="checkbox" /> -->
+				
+				<!--
+				Some spans to act as a hamburger.
+				
+				They are acting like a real hamburger,
+				not that McDonalds stuff.
+				-->
+				<!-- <span></span>
+				<span></span>
+				<span></span>
+				-->
+				<!--
+				Too bad the menu has to be inside of the button
+				but hey, it's pure CSS magic.
+				-->
 
-		</nav>
+					<!-- <ul style="list-style-position: inside;">
+						<a href="#home"><li>HOME</li></a>
+						<a href="#news"><li>NEWS</li></a>
+						<a href="#about"><li>ABOUT</li></a>
+						<a href="#palmares"><li>PALMARES</li></a>
+						<a href="#calendar"><li>CALENDAR</li></a>
+						<a href="#gallery"><li>GALLERY</li></a>
+						<a href="#contact"><li>CONTACT</li></a>
+					</ul> -->
+				<!-- </div> -->
+
+				</div>
+		
+			<div class="burger">
+				<span></span>
+				</div>
+				
+				<nav>
+				<ul class="main">
+					<li><a style="font-family: Raleway, Helvetica, sans-serif; font-weight:600; letter-spacing: 0.175em; line-height: 1.75;
+						margin: 0 0 1.5rem 0;
+						text-transform: uppercase;" href="#home">Home</a></li>
+					<li><a style="font-family: Raleway, Helvetica, sans-serif; font-weight:600; letter-spacing: 0.175em; line-height: 1.75;
+						margin: 0 0 1.5rem 0;
+						text-transform: uppercase;" href="#news">News</a></li>
+					<li><a style="font-family: Raleway, Helvetica, sans-serif; font-weight:600; letter-spacing: 0.175em; line-height: 1.75;
+						margin: 0 0 1.5rem 0;
+						text-transform: uppercase;" href="#about">About</a></li>
+					<li><a style="font-family: Raleway, Helvetica, sans-serif; font-weight:600; letter-spacing: 0.175em; line-height: 1.75;
+						margin: 0 0 1.5rem 0;
+						text-transform: uppercase;" href="#palmares">Palmares</a></li>
+					<li><a style="font-family: Raleway, Helvetica, sans-serif; font-weight:600; letter-spacing: 0.175em; line-height: 1.75;
+						margin: 0 0 1.5rem 0;
+						text-transform: uppercase;" href="#calendar">Calendar</a></li>
+					<li><a style="font-family: Raleway, Helvetica, sans-serif; font-weight:600; letter-spacing: 0.175em; line-height: 1.75;
+						margin: 0 0 1.5rem 0;
+						text-transform: uppercase;" href="#gallery">Gallery</a></li>
+					<li><a style="font-family: Raleway, Helvetica, sans-serif; font-weight:600; letter-spacing: 0.175em; line-height: 1.75;
+						margin: 0 0 1.5rem 0;
+						text-transform: uppercase;" href="#contact">Contact</a></li>
+				</ul>
+				
+				
+				<!-- <div class="social">
+					<a href="#0" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 64 64"><g transform="translate(0, 0)"><path d="M64,12.2c-2.4,1-4.9,1.8-7.5,2.1c2.7-1.6,4.8-4.2,5.8-7.3c-2.5,1.5-5.3,2.6-8.3,3.2C51.5,7.6,48.1,6,44.3,6 c-7.3,0-13.1,5.9-13.1,13.1c0,1,0.1,2,0.3,3C20.6,21.6,10.9,16.3,4.5,8.4c-1.1,1.9-1.8,4.2-1.8,6.6c0,4.6,2.3,8.6,5.8,10.9 c-2.2-0.1-4.2-0.7-5.9-1.6c0,0.1,0,0.1,0,0.2c0,6.4,4.5,11.7,10.5,12.9c-1.1,0.3-2.3,0.5-3.5,0.5c-0.8,0-1.7-0.1-2.5-0.2 c1.7,5.2,6.5,9,12.3,9.1c-4.5,3.5-10.2,5.6-16.3,5.6c-1.1,0-2.1-0.1-3.1-0.2C5.8,55.8,12.7,58,20.1,58c24.2,0,37.4-20,37.4-37.4 c0-0.6,0-1.1,0-1.7C60,17.1,62.2,14.8,64,12.2z"></path></g></svg></a>
+					<a href="#0" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 64 64"><g transform="translate(0, 0)"><path d="M32,5.766c8.544,0,9.556,0.033,12.931,0.187c3.642,0.166,7.021,0.895,9.621,3.496 c2.6,2.6,3.329,5.979,3.496,9.621c0.154,3.374,0.187,4.386,0.187,12.931s-0.033,9.556-0.187,12.931 c-0.166,3.642-0.895,7.021-3.496,9.621c-2.6,2.6-5.98,3.329-9.621,3.496c-3.374,0.154-4.386,0.187-12.931,0.187 s-9.557-0.033-12.931-0.187c-3.642-0.166-7.021-0.895-9.621-3.496c-2.6-2.6-3.329-5.979-3.496-9.621 C5.798,41.556,5.766,40.544,5.766,32s0.033-9.556,0.187-12.931c0.166-3.642,0.895-7.021,3.496-9.621 c2.6-2.6,5.979-3.329,9.621-3.496C22.444,5.798,23.456,5.766,32,5.766 M32,0c-8.691,0-9.78,0.037-13.194,0.193 c-5.2,0.237-9.768,1.511-13.436,5.178C1.705,9.037,0.43,13.604,0.193,18.806C0.037,22.22,0,23.309,0,32 c0,8.691,0.037,9.78,0.193,13.194c0.237,5.2,1.511,9.768,5.178,13.436c3.666,3.666,8.234,4.941,13.436,5.178 C22.22,63.963,23.309,64,32,64s9.78-0.037,13.194-0.193c5.199-0.237,9.768-1.511,13.436-5.178c3.666-3.666,4.941-8.234,5.178-13.436 C63.963,41.78,64,40.691,64,32s-0.037-9.78-0.193-13.194c-0.237-5.2-1.511-9.768-5.178-13.436 c-3.666-3.666-8.234-4.941-13.436-5.178C41.78,0.037,40.691,0,32,0L32,0z"></path> <path data-color="color-2" d="M32,15.568c-9.075,0-16.432,7.357-16.432,16.432c0,9.075,7.357,16.432,16.432,16.432 S48.432,41.075,48.432,32C48.432,22.925,41.075,15.568,32,15.568z M32,42.667c-5.891,0-10.667-4.776-10.667-10.667 c0-5.891,4.776-10.667,10.667-10.667c5.891,0,10.667,4.776,10.667,10.667C42.667,37.891,37.891,42.667,32,42.667z"></path> <circle data-color="color-2" cx="49.082" cy="14.918" r="3.84"></circle></g></svg></a>
+				</div> -->
+				
+				<ul class="menucopyright">
+					<a href="impressum.html">Impressum</a>
+					<a href="datenschutz.html">Datenschutz</a>
+				</ul>
+				</nav>
+				
+				<div class="overlay"></div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -73,39 +125,46 @@
 							<h2>news</h2>
 							<h4>news and recent stories from my life as a pro cyclist</h4>
 						</header>
+
 						<div class="content">
 							<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-						<div class="elfsight-app-0982ca7c-c495-449b-8817-6bd979fb07ce"></div>
-
-	
+							<div class="elfsight-app-a64d07e1-0376-4f6a-8d2d-52ee8d344a63"></div>
 						</div>
 					</section>
+			
 
-					
+
+
+
 				<!-- About -->
 				<a id="about"></a>
 				<section class="one_column">
 					
 					<header>
 						<h2>about</h2>
-						<h4>Thanks to my partners and sponsers that make this journey possible!</h4>
+						<h4>
+							<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+							Thanks to my partners that make this journey possible</h4>
 
 						<bilder>
 							<span class="image logos"><img src="./images/logos/singer.png" alt="" /></span>
-							<span class="image logos"><img src="./images/logos/ceramicspeed.png" alt="" /></span>
-							<span class="image logos"><img src="./images/logos/abus.png" alt="" /></span>
-							<span class="image logos"><img src="./images/logos/craft.png" alt="" /></span>
 							<span class="image logos"><img src="./images/logos/ktm.png" alt="" /></span>
-							<span class="image logos"><img src="./images/logos/rena.png" alt="" /></span>
-							<span class="image logos"><img src="./images/logos/riegler.png" alt="" /></span>
 							<span class="image logos"><img src="./images/logos/rothaus.png" alt="" /></span>
-							<span class="image logos"><img src="./images/logos/wiha.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/abus.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/ceramicspeed.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/craft.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/duke.png" alt="" /></span>
 							<span class="image logos"><img src="./images/logos/winforce.png" alt="" /></span>
-							<span class="image logos"><img src="./images/logos/sqlab.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/riegler.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/rena.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/schwalbe.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/bliz.png" alt="" /></span>
 							<span class="image logos"><img src="./images/logos/kinetixx.png" alt="" /></span>
-							<span class="image logos"><img src="./images/logos/winsole.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/wiha.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/sqlab.png" alt="" /></span>
+							<span class="image logos"><img src="./images/logos/garmin.png" alt="" /></span>
 							<span class="image logos"><img src="./images/logos/carbonti.png" alt="" /></span>
-							<!-- <span class="image header"><img src="./images/about3.jpg" alt="" /></span> -->
+							<span class="image logos"><img src="./images/logos/winsole.png" alt="" /></span>
 						</bilder>
 
 					</header>
@@ -203,11 +262,11 @@
 						<h2></h2>
 					</header>
 					<div class="content">
-						<p><strong><result>09–12 / 02 / 2023</result></strong> </p>
+						<p><strong><done>09–12 / 02 / 2023</done></strong> </p>
 						
 					</div>
 					<div class="content2">
-						<a href="https://www.mediterraneanepic.com/en/" target="_blank"> <strong><result>ESP | Mediterranean Epic</result> – P5</strong></a>
+						<a href="https://www.mediterraneanepic.com/en/" target="_blank"> <strong><done>ESP | Mediterranean Epic</done> – <result>P5</result></strong></a>
 					</div>
 				</section>
 
@@ -217,12 +276,11 @@
 						<h2></h2>
 					</header>
 					<div class="content">
-						<p><strong>19–26 / 03 / 2023</strong> </p>
+						<p><strong><done>19–26 / 03 / 2023</done></strong> </p>
 						
 					</div>
 					<div class="content2">
-						<a href="https://www.epic-series.com/capeepic" target="_blank"> <strong>SA | Absa Cape Epic 
-							<result></result></strong></a>
+						<a href="https://www.epic-series.com/capeepic" target="_blank"> <strong><done>RSA | Absa Cape Epic</done> – <result>P2 in Stage 6</result></strong></a>
 					</div>
 				</section>
 
@@ -386,7 +444,7 @@
 						
 					</div>
 					<div class="content2">
-						<a href="https://www.uci.org/competition-details/2023/MTB/68925" target="_blank"> <strong>FR | UCI MTB Marathon Worldcup Les Gets
+						<a href="https://www.uci.org/competition-details/2023/MTB/68925" target="_blank"> <strong>FRA | UCI MTB Marathon Worldcup Les Gets
 							<result></result></strong></a>
 					</div>
 				</section>
@@ -510,7 +568,6 @@
 								<li>
 									<h3>News</h3>
 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter" ><span class="label">Twitter</span></a></li>
 										<li><a href="https://www.facebook.com/people/Martin-Frey-Mountainbike/100063626138183/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="https://www.instagram.com/martin__frey/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
 										<!-- <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
@@ -530,28 +587,33 @@
 						Partners
 					</h2>
 					<bilder>
-						<span class="image logos_block"><img src="./images/logos/singer.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/ceramicspeed.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/abus.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/craft.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/ktm.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/rena.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/riegler.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/rothaus.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/wiha.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/winforce.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/sqlab.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/kinetixx.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/winsole.png" alt="" /></span>
-						<span class="image logos_block"><img src="./images/logos/carbonti.png" alt="" /></span>
-						<!-- <span class="image header"><img src="./images/about3.jpg" alt="" /></span> -->
+						<span class="image logos_block"><img src="./images/logos/farbe/singer.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/ktm.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/rothaus.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/abus.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/ceramicspeed.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/craft.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/duke.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/winforce.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/riegler.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/rena.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/schwalbe.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/bliz.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/kinetixx.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/wiha.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/sqlab.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/garmin.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/carbonti.png" alt="" /></span>
+						<span class="image logos_block"><img src="./images/logos/farbe/winsole.png" alt="" /></span>
+						
 					</bilder>
 				</section>
 
 
 				<!-- Copyright -->
-					<section class="copyright">
+					<section class="footlinks">
 						 <a href="impressum.html" >Impressum</a> 
+						 <a href="datenschutz.html" >Datenschutz</a> 
 					</section>
 
 			</div>
@@ -567,6 +629,27 @@
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 			<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+			<script type="text/javascript" src="assets/js/burgermenu_close.js"></script>
+			<script type="text/javascript" src="assets/js/burger.js"></script>
 
+			<script src="assets/js/project.js" defer></script>
+	
+
+
+			<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+			<script>
+			window.cookieconsent.initialise({
+			"palette": {
+				"popup": {
+				"background": "#cdcdcd"
+				},
+				"button": {
+				"background": "#a3bc9c"
+				}
+			},
+			"theme": "edgeless",
+			"type": "opt-out"
+			});
+			</script>
 	</body>
 </html>

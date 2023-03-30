@@ -1,20 +1,24 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
 
-/*
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 :root {
 	/* --primary-color: #a3bc9c; */
-	--primary-color: rgb(163, 188, 156);
+	--primary-color: #a3bc9c;
 	/* --primary-color: #393939; */
-	--secondary-color: rgb(255, 255, 255);
+	--secondary-color: #ffffff;
 	--brightgrey: #cdcdcd; /*rgb(170, 170, 170);*/
 	--third-color: black;
 	--red-color: #c96464;
+
+	/* Burger Menu */
+	--header-height:6rem;
+	--mobile-menu-width:4rem;
+	
+	--purple-dark-2:hsl(270,0%,5%);
+	--purple-dark-1:hsl(270,20%,15%);
+	--purple:hsl(270,40%,50%);
+	--purple-light-1:hsl(270,40%,55%)
 }
 
 
@@ -82,7 +86,6 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
 
 /* Basic */
 
@@ -212,11 +215,15 @@ input, select, textarea {
 		text-align: block;
 		margin: 0 0 2rem 0;
 	}
-	result {
+	done {
 		text-align: block;
 		margin: 0 0 2rem 0;
 		color:var(--primary-color);
-		
+	}
+	result {
+		text-align: block;
+		margin: 0 0 2rem 0;
+		color:var(--red-color);
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2553,12 +2560,12 @@ input, select, textarea {
 		.image.logos {
 			display: block;
 			float: right;
-			margin-top: 4rem;
+			margin-top: 1.9rem;
 			
 		}
 
 			.image.logos img {
-				width: 7rem;
+				width: 6rem;
 			}
 
 		.image.logos_block {
@@ -2624,13 +2631,135 @@ input, select, textarea {
 
 	}
 
+/*** Mobile Burger Menu Button */
+
+/*** Mobile Menu Button */
+
+/* #mobile-menu{
+	position:absolute;
+	top:50%;
+	right:2rem;
+	transform:translateY(-50%);
+	z-index:1;
+	width:var(--mobile-menu-width);
+	height:var(--mobile-menu-width);
+	cursor:pointer;
+}
+#mobile-menu span{
+	position:absolute;
+	width:80%;
+	height:1px;
+	left:10%;
+	top:50%;
+	background-color:var(--purple);
+	transition:all 0.3s ease-in-out;
+}
+#mobile-menu span:first-of-type{
+	top:25%;
+}
+#mobile-menu span:last-of-type{
+	top:75%;
+}
+#mobile-menu.open span{
+	opacity:0;
+}
+#mobile-menu.open span:first-of-type,
+#mobile-menu.open span:last-of-type{
+	transform:rotate(45deg);
+	opacity:1;
+	top:50%;
+}
+#mobile-menu.open span:last-of-type{
+	transform:rotate(-45deg);
+} */
+
+/** Mobile Menu Content */
+/* 
+#mobile-menu-content{
+	width:100%;
+	height:calc(100vh - var(--header-height));
+	background:var(--purple);
+	position:fixed;
+	top:-100vh;
+	left:0;
+	z-index:5;
+	display:flex;
+	align-items:flex-start;
+	transition:top 0.7s ease-in-out;
+}
+#mobile-menu-content.open{
+	top:var(--header-height);
+}
+#mobile-menu-content > div{
+	width:100%;
+	height:calc(100vh - var(--header-height));
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+#mobile-menu-content > div > ul{
+	width:100%;
+}
+#mobile-menu-content ul li{
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	text-align:center;
+	border-top:1px solid var(--purple-light-1);
+}
+#mobile-menu-content ul li:last-of-type{
+	border-bottom:1px solid var(--purple-light-1);
+}
+#mobile-menu-content ul li a{
+	padding:2rem;
+	text-decoration:none;
+	color:var(--purple-dark-2);
+	display:block;
+} */
+
+/** - Tablet Landscape und Large UI Scales */
+
+/* @media (max-width:1024px){
+	header nav ul{
+		display:none;
+	}
+} */
+
+/*** Desktop-Menu */
+
+/* 
+#menuToggle {
+	left: calc(100vw - 12rem);
+	
+	z-index: 1;
+	position: fixed;
+   	width: 12rem;
+   	height: 100vh;
+	
+	padding: 30px;
+	padding-top: 125px;
+	
+	background: #ededed;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+}
+#menuToggle ul{
+   	font-size: 22px;
+	list-style: none;
+	margin:0;
+	padding-left: 1rem;
+}
+#menuToggle li{
+	padding-bottom: calc((100vh - (2 * 20vh) - 7rem)/7);
+} */
+
 /* Burger Menu */
 
- #menuToggle
+ /* #menuToggle
  {
    display: block;
    position: fixed;
-   /* Position of burger */
+   * Position of whole menu *
    top: 2rem;
    left: calc(100vw - 40px - 2rem);
    
@@ -2655,6 +2784,7 @@ input, select, textarea {
  
  
  #menuToggle input
+ * Fake Checkbox *
  {
    display: block;
    width: 40px;
@@ -2665,17 +2795,18 @@ input, select, textarea {
    
    cursor: pointer;
    
-   opacity: 0; /* hide this */
-   z-index: 2; /* and place it over the hamburger */
+   opacity: 0; * hide this *
+   z-index: 2; * and place it over the hamburger *
    
    -webkit-touch-callout: none;
  }
  
- /*
+ 
   * Just a quick hamburger
-  */
+  
  #menuToggle span
  {
+	create the three Lines of the burger 
    display: block;
    width: 33px;
    height: 4px;
@@ -2692,7 +2823,7 @@ input, select, textarea {
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 			   background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 			   opacity 0.55s ease;
- }
+ } *
  
  #menuToggle span:first-child
  {
@@ -2707,41 +2838,45 @@ input, select, textarea {
  /* 
   * Transform all the slices of hamburger
   * into a crossmark.
-  */
+  *
+
  #menuToggle input:checked ~ span
  {
    opacity: 1;
    transform: rotate(45deg) translate(-2px, -1px);
    background: black;
  }
+
  
  /*
   * But let's hide the middle one.
-  */
+  *
  #menuToggle input:checked ~ span:nth-last-child(3)
  {
    opacity: 0;
    transform: rotate(0deg) scale(0.2, 0.2);
  }
+
  
  /*
   * Ohyeah and the last one should go the other direction
-  */
+  *
  #menuToggle input:checked ~ span:nth-last-child(2)
  {
    transform: rotate(-45deg) translate(0, -1px);
  }
- 
+
+
  /*
   * Make this absolute positioned
-  * at the top left of the screen
-  */
+  * at the top right of the screen
+  *
  #menu
  {
    position:fixed;
    width: 25vw;
    height: calc(100vh + 100px);
-   /* margin so it lies underneath burger */
+   /* margin so it lies underneath burger *
    margin: -100px 0 0 -200px;
    padding: 50px;
    padding-top: 125px;
@@ -2749,7 +2884,7 @@ input, select, textarea {
    background: #ededed;
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
-   /* to stop flickering of text in safari */
+   /* to stop flickering of text in safari *
    
    transform-origin: 0% 0%;
    transform: translate(100%, 0);
@@ -2766,14 +2901,25 @@ input, select, textarea {
  /*
   * And let's slide it in from the left
   */
- #menuToggle input:checked ~ ul
+ /* #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ } *
+ #menuToggle > .open ~ ul
  {
    transform: none;
  }
-
+ /* #menuToggle ~ ul
+ {
+   transform: none;
+ } *
+ #menuToggle ~ ul
+ {
+   transform: none;
+ }
  
 
-/* BURGER MENU MOBILE */
+/* BURGER MENU MOBILE *
 
 @media screen and (max-width: 1279px) {
 
@@ -2781,7 +2927,7 @@ input, select, textarea {
 	{
 	  display: block;
 	  position: fixed;
-	  /* Position of burger */
+	  /* Position of burger *
 	  top: 1rem;
 	  left: calc(100vw - 40px - 1rem);
 	  
@@ -2795,22 +2941,22 @@ input, select, textarea {
 	/*
 	 * Make this absolute positioned
 	 * at the top left of the screen
-	 */
+	 *
 	#menu
 	{
 	  position: fixed;
 	  width: 50vw;
 	  height: calc(60vh + 100px);
-	  /* margin so it lies underneath burger */
+	  /* margin so it lies underneath burger *
 	  margin: -100px 0 0 -90px;
 	  padding: 20px;
 	  padding-top: 125px;
 	  
-	  /* background: #ededed; */
+	  /* background: #ededed; *
 	  background: var(--red-color);
 	  list-style-type: none;
 	  -webkit-font-smoothing: antialiased;
-	  /* to stop flickering of text in safari */
+	  /* to stop flickering of text in safari *
 	  
 	  transform-origin: 0% 0%;
 	  transform: translate(100%, 0);
@@ -2828,7 +2974,7 @@ input, select, textarea {
 	
 	/*
 	 * And let's slide it in from the left
-	 */
+	 *
 	#menuToggle input:checked ~ ul
 	{
 	  transform: none;
@@ -2836,6 +2982,376 @@ input, select, textarea {
 
 }
 
+
+/*  COLORS
+========================================== */
+/*  FONTS
+========================================== */
+/*  MIXINS
+========================================== */
+/*  RESET
+========================================== */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+body.overflow {
+  overflow: hidden;
+}
+
+/*  BURGER
+========================================== */
+.burger {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 4px;
+  z-index: 10;
+}
+.burger span {
+  position: relative;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -1.5px;
+}
+.burger span, .burger span::before, .burger span::after {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #2a2a2a;
+  outline: 1px solid transparent;
+  -webkit-transition-property: background-color, -webkit-transform;
+  -moz-transition-property: background-color, -moz-transform;
+  -o-transition-property: background-color, -o-transform;
+  transition-property: background-color, transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.burger span::before, .burger span::after {
+  position: absolute;
+  content: "";
+}
+.burger span::before {
+  top: -9px;
+}
+.burger span::after {
+  top: 9px;
+}
+.burger.clicked span {
+  background-color: transparent;
+}
+.burger.clicked span::before {
+  -webkit-transform: translateY(9px) rotate(45deg);
+  -moz-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
+}
+.burger.clicked span::after {
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+  -moz-transform: translateY(-9px) rotate(-45deg);
+  -ms-transform: translateY(-9px) rotate(-45deg);
+  -o-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
+}
+.burger.clicked span:before, .burger.clicked span:after {
+  background-color: #ffffff;
+}
+.burger:hover {
+  cursor: pointer;
+}
+
+/*  NAV
+========================================== */
+nav {
+  background-color: #2a2a2a;
+  /* background-color: var(--brightgrey); */
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 515px;
+  /* width: 100%; */
+  /* width: 25vw; */
+  padding: 100px 40px 60px 40px;
+  overflow-y: auto;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+nav.show {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+}
+nav.show ul.main li {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  opacity: 1;
+}
+nav.show ul.main li h3 {
+	color:white;
+  }
+/* nav.show ul.main li:nth-child(1) {
+  transition-delay: 0.15s;
+}
+nav.show ul.main li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+nav.show ul.main li:nth-child(3) {
+  transition-delay: 0.45s;
+}
+nav.show ul.main li:nth-child(4) {
+  transition-delay: 0.6s;
+}
+nav.show ul.main li:nth-child(5) {
+  transition-delay: 0.75s;
+}
+nav.show ul.main li:nth-child(6) {
+  transition-delay: 0.9s;
+}
+nav.show ul.main li:nth-child(7) {
+  transition-delay: 1.05s;
+}
+nav.show ul.main li:nth-child(8) {
+  transition-delay: 1.2s;
+}
+nav.show ul.main li:nth-child(9) {
+  transition-delay: 1.35s;
+} */
+nav.show .about,
+nav.show .social,
+nav.show ul.sub {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  opacity: 1;
+  /* transition-delay: 0.85s; */
+}
+@media (min-width: 1279px) {
+  nav {
+    /* padding: 120px 90px 70px 90px; */
+	/* width: 50vw; */
+  }
+}
+nav ul.main {
+  list-style-type: none;
+}
+nav ul.main li {
+  margin-bottom: 20px;
+  -webkit-transform: translateX(40px);
+  -moz-transform: translateX(40px);
+  -ms-transform: translateX(40px);
+  -o-transform: translateX(40px);
+  transform: translateX(40px);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+nav ul.main li:last-of-type {
+  margin-bottom: 0px;
+}
+nav ul.main li a {
+  color: #ffffff;
+  /* font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  display: block;
+  letter-spacing: 5px;
+  font-weight: 600; */
+  padding: 10px 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+nav ul.main li a span {
+  /* color: #b7ac7f; */
+  color: var(--primary-color);
+}
+nav ul.main li a:hover {
+  /* color: #b7ac7f; */
+  color: var(--primary-color);
+}
+nav .about {
+  margin-top: 40px;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+nav .about p {
+  color: #ffffff;
+  /* font-family: "Spectral", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  line-height: 170%; */
+}
+/* nav .social {
+  margin-top: 40px;
+  position: relative;
+  padding-bottom: 30px;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+nav .social:after {
+  content: "";
+  width: 400%;
+  height: 2px;
+  /* background-color: #b7ac7f; 
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: 0;
+  left: -20vw;
+}
+nav .social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+nav .social a:last-of-type {
+  margin-right: 0px;
+}
+nav .social a:hover svg path,
+nav .social a:hover svg circle {
+  /* fill: #b7ac7f; 
+  fill: var(--primary-color);
+}
+nav .social a svg {
+  width: 100%;
+  height: 100%;
+}
+nav .social a svg path,
+nav .social a svg circle {
+  fill: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+} */
+nav ul.sub {
+  list-style-type: none;
+  margin-top: 40px;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+nav ul.sub li {
+  margin-bottom: 10px;
+}
+nav ul.sub li:last-of-type {
+  margin-bottom: 0px;
+}
+nav ul.sub li a {
+  color: #ffffff;
+  /* font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem; */
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+nav ul.sub li a:hover {
+  /* color: #b7ac7f; */
+  color: var(--primary-color);
+}
+nav .menucopyright {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: calc(100vh - 5rem);
+	text-align: center;
+}
+nav .menucopyright a{
+	padding-right:1rem;
+	color: white;
+}
+
+/*  OVERLAY
+========================================== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* background-color: #b7ac7f; */
+  background-color: var(--primary-color);
+  opacity: 0;
+  visibility: hidden;
+}
+.overlay.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+/* BURGER FERTIG */
 
 /* List */
 
@@ -4197,15 +4713,28 @@ input, select, textarea {
 						
 						}
 
+				
+				#wrapper > section.footlinks{
+					/* display:flexbox; */
+					width: 33vw;
+					left:0;
+					padding:1rem;
+					text-align: center;
+				}
 
 
-
-			#wrapper > section.copyright {
-				display: block;
-				width: calc(33vw - 5rem);
-				text-align: right;
-				z-index: 2;
-			}
+				#wrapper > section.newpage{
+					
+					display: block;
+					padding-top: 5rem;
+					padding-left: 20%;
+					padding-right: 20%;
+					text-align:justify;
+				}
+					#wrapper > section.newpage > h2 {
+						text-align: center;
+					}
+				
 
 
 
@@ -4656,6 +5185,7 @@ input, select, textarea {
 							}
 	
 					#wrapper > section.feed > .content {
+						
 						width:100vw;
 						margin-top: 3rem;
 						background-color: var(--primary-color);
@@ -4675,7 +5205,7 @@ input, select, textarea {
 					width: 100vw;
 					height: 3rem;
 					-webkit-text-fill-color: var(--third-color);
-					background-color: rgb(255, 255, 255);
+					background-color: var(--brightgrey);
 					z-index: 1;
 					}
 
@@ -4954,13 +5484,19 @@ input, select, textarea {
 			
 		}
 
-		#wrapper > section.copyright {
+		#wrapper > section.footlinks {
 			display: block;
 			width: 100vw;
 			text-align: center;
 			padding: 0.5rem;
-			-webkit-text-fill-color: var(--primary-color);
+			padding-bottom: 2rem;
+			/* -webkit-text-fill-color: var(--primary-color); */
 		}
+			#wrapper > section.footlinks a{
+				padding-left: 2rem;
+				padding-right: 2rem;
+				color: black;
+			}
 
 
 		}
