@@ -11,14 +11,6 @@
 	--third-color: black;
 	--red-color: #c96464;
 
-	/* Burger Menu */
-	--header-height:6rem;
-	--mobile-menu-width:4rem;
-	
-	--purple-dark-2:hsl(270,0%,5%);
-	--purple-dark-1:hsl(270,20%,15%);
-	--purple:hsl(270,40%,50%);
-	--purple-light-1:hsl(270,40%,55%)
 }
 
 
@@ -2000,7 +1992,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: var(--brightgrey);
+				background-color: var(--third-color);
 			}
 
 			input[type="submit"].primary:active,
@@ -2011,7 +2003,7 @@ input, select, textarea {
 				background-color: var(--primary-color);
 			}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 1079px) {
 
 			input[type="submit"],
 			input[type="reset"],
@@ -2021,6 +2013,7 @@ input, select, textarea {
 				font-size: 0.7rem;
 				height: 3.3rem;
 				line-height: 3.3rem;
+				width: calc(100vw - 5rem - 2rem);
 			}
 
 				input[type="submit"].large,
@@ -2128,7 +2121,7 @@ input, select, textarea {
 		-ms-appearance: none;
 		appearance: none;
 		border-radius: 0.325rem;
-		border: solid 2px rgba(144, 144, 144, 0.25);
+		border: solid 2px var(--brightgrey);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -2160,7 +2153,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: var(--third-color);
+		color: var(blac);
 		display: block;
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.75rem;
@@ -2627,360 +2620,8 @@ input, select, textarea {
 			margin-bottom: 0rem;
 
 		}
-	
-
 	}
 
-/*** Mobile Burger Menu Button */
-
-/*** Mobile Menu Button */
-
-/* #mobile-menu{
-	position:absolute;
-	top:50%;
-	right:2rem;
-	transform:translateY(-50%);
-	z-index:1;
-	width:var(--mobile-menu-width);
-	height:var(--mobile-menu-width);
-	cursor:pointer;
-}
-#mobile-menu span{
-	position:absolute;
-	width:80%;
-	height:1px;
-	left:10%;
-	top:50%;
-	background-color:var(--purple);
-	transition:all 0.3s ease-in-out;
-}
-#mobile-menu span:first-of-type{
-	top:25%;
-}
-#mobile-menu span:last-of-type{
-	top:75%;
-}
-#mobile-menu.open span{
-	opacity:0;
-}
-#mobile-menu.open span:first-of-type,
-#mobile-menu.open span:last-of-type{
-	transform:rotate(45deg);
-	opacity:1;
-	top:50%;
-}
-#mobile-menu.open span:last-of-type{
-	transform:rotate(-45deg);
-} */
-
-/** Mobile Menu Content */
-/* 
-#mobile-menu-content{
-	width:100%;
-	height:calc(100vh - var(--header-height));
-	background:var(--purple);
-	position:fixed;
-	top:-100vh;
-	left:0;
-	z-index:5;
-	display:flex;
-	align-items:flex-start;
-	transition:top 0.7s ease-in-out;
-}
-#mobile-menu-content.open{
-	top:var(--header-height);
-}
-#mobile-menu-content > div{
-	width:100%;
-	height:calc(100vh - var(--header-height));
-	display:flex;
-	flex-wrap:wrap;
-	align-items:center;
-}
-#mobile-menu-content > div > ul{
-	width:100%;
-}
-#mobile-menu-content ul li{
-	display:flex;
-	justify-content:center;
-	flex-direction:column;
-	text-align:center;
-	border-top:1px solid var(--purple-light-1);
-}
-#mobile-menu-content ul li:last-of-type{
-	border-bottom:1px solid var(--purple-light-1);
-}
-#mobile-menu-content ul li a{
-	padding:2rem;
-	text-decoration:none;
-	color:var(--purple-dark-2);
-	display:block;
-} */
-
-/** - Tablet Landscape und Large UI Scales */
-
-/* @media (max-width:1024px){
-	header nav ul{
-		display:none;
-	}
-} */
-
-/*** Desktop-Menu */
-
-/* 
-#menuToggle {
-	left: calc(100vw - 12rem);
-	
-	z-index: 1;
-	position: fixed;
-   	width: 12rem;
-   	height: 100vh;
-	
-	padding: 30px;
-	padding-top: 125px;
-	
-	background: #ededed;
-	list-style-type: none;
-	-webkit-font-smoothing: antialiased;
-}
-#menuToggle ul{
-   	font-size: 22px;
-	list-style: none;
-	margin:0;
-	padding-left: 1rem;
-}
-#menuToggle li{
-	padding-bottom: calc((100vh - (2 * 20vh) - 7rem)/7);
-} */
-
-/* Burger Menu */
-
- /* #menuToggle
- {
-   display: block;
-   position: fixed;
-   * Position of whole menu *
-   top: 2rem;
-   left: calc(100vw - 40px - 2rem);
-   
-   z-index: 1;
-   
-   -webkit-user-select: none;
-   user-select: none;
- }
- 
- #menuToggle a
- {
-   text-decoration: none;
-   color: black;
-   
-   transition: color 0.3s ease;
- }
- 
- #menuToggle a:hover
- {
-   color: var(--primary-color);
- }
- 
- 
- #menuToggle input
- * Fake Checkbox *
- {
-   display: block;
-   width: 40px;
-   height: 32px;
-   position: absolute;
-   top: -7px;
-   left: -5px;
-   
-   cursor: pointer;
-   
-   opacity: 0; * hide this *
-   z-index: 2; * and place it over the hamburger *
-   
-   -webkit-touch-callout: none;
- }
- 
- 
-  * Just a quick hamburger
-  
- #menuToggle span
- {
-	create the three Lines of the burger 
-   display: block;
-   width: 33px;
-   height: 4px;
-   margin-bottom: 5px;
-   position: relative;
-   
-   background: black;
-   border-radius: 3px;
-   
-   z-index: 2;
-   
-   transform-origin: 4px 0px;
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-			   background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-			   opacity 0.55s ease;
- } *
- 
- #menuToggle span:first-child
- {
-   transform-origin: 0% 0%;
- }
- 
- #menuToggle span:nth-last-child(2)
- {
-   transform-origin: 0% 100%;
- }
- 
- /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  *
-
- #menuToggle input:checked ~ span
- {
-   opacity: 1;
-   transform: rotate(45deg) translate(-2px, -1px);
-   background: black;
- }
-
- 
- /*
-  * But let's hide the middle one.
-  *
- #menuToggle input:checked ~ span:nth-last-child(3)
- {
-   opacity: 0;
-   transform: rotate(0deg) scale(0.2, 0.2);
- }
-
- 
- /*
-  * Ohyeah and the last one should go the other direction
-  *
- #menuToggle input:checked ~ span:nth-last-child(2)
- {
-   transform: rotate(-45deg) translate(0, -1px);
- }
-
-
- /*
-  * Make this absolute positioned
-  * at the top right of the screen
-  *
- #menu
- {
-   position:fixed;
-   width: 25vw;
-   height: calc(100vh + 100px);
-   /* margin so it lies underneath burger *
-   margin: -100px 0 0 -200px;
-   padding: 50px;
-   padding-top: 125px;
-   
-   background: #ededed;
-   list-style-type: none;
-   -webkit-font-smoothing: antialiased;
-   /* to stop flickering of text in safari *
-   
-   transform-origin: 0% 0%;
-   transform: translate(100%, 0);
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
- }
- 
- #menu li
- {
-   padding: 10px 0;
-   font-size: 22px;
- }
- 
- /*
-  * And let's slide it in from the left
-  */
- /* #menuToggle input:checked ~ ul
- {
-   transform: none;
- } *
- #menuToggle > .open ~ ul
- {
-   transform: none;
- }
- /* #menuToggle ~ ul
- {
-   transform: none;
- } *
- #menuToggle ~ ul
- {
-   transform: none;
- }
- 
-
-/* BURGER MENU MOBILE *
-
-@media screen and (max-width: 1279px) {
-
-	#menuToggle
-	{
-	  display: block;
-	  position: fixed;
-	  /* Position of burger *
-	  top: 1rem;
-	  left: calc(100vw - 40px - 1rem);
-	  
-	  z-index: 1;
-	  
-	  -webkit-user-select: none;
-	  user-select: none;
-	}
-	
-	
-	/*
-	 * Make this absolute positioned
-	 * at the top left of the screen
-	 *
-	#menu
-	{
-	  position: fixed;
-	  width: 50vw;
-	  height: calc(60vh + 100px);
-	  /* margin so it lies underneath burger *
-	  margin: -100px 0 0 -90px;
-	  padding: 20px;
-	  padding-top: 125px;
-	  
-	  /* background: #ededed; *
-	  background: var(--red-color);
-	  list-style-type: none;
-	  -webkit-font-smoothing: antialiased;
-	  /* to stop flickering of text in safari *
-	  
-	  transform-origin: 0% 0%;
-	  transform: translate(100%, 0);
-	  
-	  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-	  z-index: -3;
-	}
-	
-	#menu li
-	{
-	  padding: 10px 0;
-	  font-size: 16px;
-	  color: white;
-	}
-	
-	/*
-	 * And let's slide it in from the left
-	 *
-	#menuToggle input:checked ~ ul
-	{
-	  transform: none;
-	}
-
-}
 
 
 /*  COLORS
@@ -3162,14 +2803,20 @@ nav.show ul.sub {
   opacity: 1;
   /* transition-delay: 0.85s; */
 }
-@media (min-width: 1279px) {
-  nav {
-    /* padding: 120px 90px 70px 90px; */
-	/* width: 50vw; */
+@media (max-width: 1279px) {
+	.burger {
+		top: 5px;
+		right: 5px;
+	  }
   }
-}
+
+
+
+
+
+/* LIST */
 nav ul.main {
-  list-style-type: none;
+list-style-type: none;
 }
 nav ul.main li {
   margin-bottom: 20px;
@@ -5086,6 +4733,7 @@ nav .menucopyright a{
 					text-transform: uppercase;
 					text-align: center;
 				}
+				
 
 
 					
@@ -5162,14 +4810,15 @@ nav .menucopyright a{
 
 						#wrapper section.feed > header h2 {
 							top: 0;
-							padding: 0.75rem;
+							padding: 1rem;
 							font-family: "Raleway", Helvetica, sans-serif;
-							font-size: 1.5rem;
+							font-size: 1.2rem;
 							font-weight: 100;
 							letter-spacing: 0.175em;
 							line-height: 100%;
 							text-transform: uppercase;
 							text-align: center;
+							color: var(--third-color);
 						}
 						#wrapper section.feed > header h4 {
 							display: none;
@@ -5211,9 +4860,9 @@ nav .menucopyright a{
 
 					#wrapper section.one_column > header h2 {
 						top: 0;
-						padding: 0.75rem;
+						padding: 1rem;
 						font-family: "Raleway", Helvetica, sans-serif;
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 						font-weight: 100;
 						letter-spacing: 0.175em;
 						line-height: 100%;
@@ -5419,20 +5068,21 @@ nav .menucopyright a{
 				left: 0;
 				width: 100vw;
 				height: 3rem;
-				-webkit-text-fill-color: white;
-				background-color: var(--brightgrey);
+				/* -webkit-text-fill-color: white; */
+				background-color: var(--primary-color);
 				}
 
 				#wrapper section.contact > header h2 {
 					top: 0;
-					padding: 0.75rem;
+					padding: 1rem;
 					font-family: "Raleway", Helvetica, sans-serif;
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 					font-weight: 100;
 					letter-spacing: 0.175em;
 					line-height: 100%;
 					text-transform: uppercase;
 					text-align: center;
+					color: black;
 				}
 
 				#wrapper > section.contact > header:before {
@@ -5449,7 +5099,7 @@ nav .menucopyright a{
 
 
 			#wrapper > section.contact > .content {
-					
+					background-color: var(--brightgrey);
 					width: 100vw;
 					/* width: calc(100vw - 1rem); */
 					padding: 0;
@@ -5458,13 +5108,12 @@ nav .menucopyright a{
 				#wrapper > section.contact > .content > .fields > .field.half {
 					width: auto;
 				}
-					#wrapper > section.contact > .content > .fields > .field.half {
-						
-					}
+			
 
 			#wrapper > section.contact > footer {
+					background-color: var(--brightgrey);
 					display: block;
-					margin-top:  4rem;
+					padding-top:  4rem;
 					text-align: center;				
 				}
 				#wrapper > section.contact > footer > .items{
@@ -5472,6 +5121,7 @@ nav .menucopyright a{
 				}
 		
 		#wrapper > section.logos{
+			margin-top: -2rem;
 			display: block;
 			padding-top: 3rem;
 			text-align: center;
@@ -5481,7 +5131,6 @@ nav .menucopyright a{
 			padding-right: calc(50vw - (7rem/2)); */
 			padding-left: 2rem;
 			padding-right: 2rem;
-			
 		}
 
 		#wrapper > section.footlinks {
