@@ -3458,7 +3458,7 @@ nav .menucopyright a{
 			}
 
 				.gallery a.landscape img {
-					height: 20vw;
+					height: 40vw;
 				}
 
 			.gallery a.portrait img {
@@ -4370,29 +4370,7 @@ nav .menucopyright a{
 				}
 
 
-				#wrapper > section.newpage{
-					
-					display: block;
-					padding-top: 5rem;
-					padding-left: 15%;
-					padding-right: 15%;
-					text-align:justify;
-					background-color: white;
-				}
-					#wrapper > section.newpage > h2 {
-						text-align: center;
-					}
-
-				#wrapper::before{
-				
-					display:none;
-				}
-				
-
-
-
-
-
+			
 
 
 		/* Responsive Design */
@@ -4794,6 +4772,7 @@ nav .menucopyright a{
 				#wrapper > section.title > .content {
 					/* height: calc(100vh - (2rem + 2rem + (0.3 * 2rem) + 0.8rem + 4rem - 0.8rem)); */
 					z-index: -1;
+					top: calc(calc(2rem + 2rem + (0.3 * 2rem) + 0.8rem + 4rem - 0.8rem) - 6rem); /*6rem hoch für Portrait */
 					}
 
 
@@ -5194,7 +5173,22 @@ nav .menucopyright a{
 		}
 	*/	
 
-	body.is-mobile #wrapper:before {
+	#newpage{
+		position: relative;
+		width: 100vw;
+		
+		display: block;
+		padding-top: 5rem;
+		padding-left: 15%;
+		padding-right: 15%;
+		text-align:justify;
+		background-color: white;
+	}
+		#newpage > h2 {
+			text-align: center;
+		}
+
+	/* body.is-mobile #wrapper:before {
 		background-attachment: scroll;
 		background-position: 50% -3%;
 		background-repeat: repeat-y;
@@ -5294,4 +5288,4 @@ nav .menucopyright a{
 			padding: 4rem;
 		}
 
-	} 
+	}  */
