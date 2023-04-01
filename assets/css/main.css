@@ -4374,13 +4374,19 @@ nav .menucopyright a{
 					
 					display: block;
 					padding-top: 5rem;
-					padding-left: 20%;
-					padding-right: 20%;
+					padding-left: 15%;
+					padding-right: 15%;
 					text-align:justify;
+					background-color: white;
 				}
 					#wrapper > section.newpage > h2 {
 						text-align: center;
 					}
+
+				#wrapper::before{
+				
+					display:none;
+				}
 				
 
 
