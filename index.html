@@ -501,6 +501,16 @@
 							<h2>Get in touch</h2>
 						</header>
 						<div class="content">
+
+							<?php
+								if(isset($_POST["submit"])){
+								mail("martinfreywebsite@gmail.com", "Kontaktformular", 'Name: '.$_POST["name"].' Email: '.$_POST["email"].' Nachricht: '.$_POST["message"]);
+								?>
+								<h3 style="color: var(--primary-color); padding-left: 4rem;">Danke für die Nachricht!</h3>
+								<?php
+								}
+							?>
+
 							<form>
 								<div class="fields">
 									<div class="field half">
