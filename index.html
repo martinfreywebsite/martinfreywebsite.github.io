@@ -502,16 +502,21 @@
 						</header>
 						<div class="content">
 
-							<?php
+							<!-- PHP geht nicht mit Github Pages -->
+							<!-- <?php
 								if(isset($_POST["submit"])){
 								mail("martinfreywebsite@gmail.com", "Kontaktformular", 'Name: '.$_POST["name"].' Email: '.$_POST["email"].' Nachricht: '.$_POST["message"]);
 								?>
-								<h3 style="color: var(--primary-color); padding-left: 4rem;">Danke für die Nachricht!</h3>
+								<h3 style="color: var(--primary-color); padding-top:2rem; text-align: center;">Danke für die Nachricht!</h3>
 								<?php
 								}
-							?>
+							?> -->
 
-							<form>
+
+							<form
+							action="https://formspree.io/f/moqzkkgw"
+							method="POST"
+							>
 								<div class="fields">
 									<div class="field half">
 										<input type="text" name="name" id="name" placeholder="Name" />
@@ -524,10 +529,11 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="button primary" /></li>
+									<li><input type="submit" value= "submit message" class="button primary" /></li>
 								</ul>
 							</form>
 						</div>
+
 						<footer>
 							<ul class="items">
 								<li>
