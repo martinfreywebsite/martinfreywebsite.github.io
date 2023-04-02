@@ -2762,9 +2762,23 @@ nav.show ul.main li {
   transform: translateX(0px);
   opacity: 1;
 }
-nav.show ul.main li h3 {
+nav.show ul.main_mobil li {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+	display: none;
+	}
+nav.show ul.main ul.main_mobil li h3 {
 	color:white;
   }
+/* 
+nav.show ul.main_mobil li h3 {
+	color:white;
+} */
+
 /* nav.show ul.main li:nth-child(1) {
   transition-delay: 0.15s;
 }
@@ -2808,6 +2822,12 @@ nav.show ul.sub {
 		top: 5px;
 		right: 5px;
 	  }
+	nav.show ul.main li{
+		display: none;
+	}
+	nav.show ul.main_mobil li{
+		display: inherit;
+	}
   }
 
 
@@ -2817,46 +2837,88 @@ nav.show ul.sub {
 /* LIST */
 nav ul.main {
 list-style-type: none;
+font-family: Raleway, Helvetica, sans-serif; 
+font-weight:600; 
+letter-spacing: 0.175em; 
+line-height: 2.5;
+margin: 0 0 1.5rem 0;
+text-transform: uppercase;
 }
-nav ul.main li {
-  margin-bottom: 20px;
-  -webkit-transform: translateX(40px);
-  -moz-transform: translateX(40px);
-  -ms-transform: translateX(40px);
-  -o-transform: translateX(40px);
-  transform: translateX(40px);
-  opacity: 0;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-nav ul.main li:last-of-type {
-  margin-bottom: 0px;
-}
-nav ul.main li a {
-  color: #ffffff;
-  /* font-family: "Raleway", sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  display: block;
-  letter-spacing: 5px;
-  font-weight: 600; */
-  padding: 10px 0;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-nav ul.main li a span {
-  /* color: #b7ac7f; */
-  color: var(--primary-color);
-}
-nav ul.main li a:hover {
-  /* color: #b7ac7f; */
-  color: var(--primary-color);
-}
+	nav ul.main li {
+	margin-bottom: 20px;
+	-webkit-transform: translateX(40px);
+	-moz-transform: translateX(40px);
+	-ms-transform: translateX(40px);
+	-o-transform: translateX(40px);
+	transform: translateX(40px);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	}
+	nav ul.main li:last-of-type {
+	margin-bottom: 0px;
+	}
+	nav ul.main li a {
+	color: #ffffff;
+	/* padding: 10px 0; */
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	}
+	nav ul.main li a span {
+	/* color: #b7ac7f; */
+	color: var(--primary-color);
+	}
+	nav ul.main li a:hover {
+	/* color: #b7ac7f; */
+	color: var(--primary-color);
+	}
+
+
+nav ul.main_mobil {
+	list-style-type: none;
+	font-family: Raleway, Helvetica, sans-serif; 
+	font-weight:600; 
+	letter-spacing: 0.175em; 
+	line-height: 3.5;
+	margin: 0 0 1.5rem 0;
+	text-transform: uppercase;
+	}
+	nav ul.main_mobil li {
+	  margin-bottom: 20px;
+	  -webkit-transform: translateX(40px);
+	  -moz-transform: translateX(40px);
+	  -ms-transform: translateX(40px);
+	  -o-transform: translateX(40px);
+	  transform: translateX(40px);
+	  opacity: 0;
+	  /* -webkit-transition: all 0.3s ease; */
+	  /* -moz-transition: all 0.3s ease;
+	  -o-transition: all 0.3s ease; */
+	  /* transition: all 0.3s ease; */
+	}
+	nav ul.main_mobil li:last-of-type {
+	  margin-bottom: 0px;
+	}
+	nav ul.main_mobil li a {
+	  color: #ffffff;
+	  padding: 10px 0;
+	  -webkit-transition: all 0.3s ease;
+	  -moz-transition: all 0.3s ease;
+	  -o-transition: all 0.3s ease;
+	  transition: all 0.3s ease;
+	}
+	nav ul.main_mobil li a span {
+	  /* color: #b7ac7f; */
+	  color: var(--primary-color);
+	}
+	nav ul.main_mobil li a:hover {
+	  /* color: #b7ac7f; */
+	  color: var(--primary-color);
+	}
 nav .about {
   margin-top: 40px;
   -webkit-transform: translateY(30px);
@@ -4785,17 +4847,18 @@ nav .menucopyright a{
 				}
 				
 					#wrapper section.feed > header {
+					position:relative;
 					top: 0;
 					left: 0;
 					width: 100vw;
-					height: 3rem;
+					height: 5rem;
 					-webkit-text-fill-color: #ffffff;
 					background-color: var(--primary-color);
 					}
 
 						#wrapper section.feed > header h2 {
 							top: 0;
-							padding: 1rem;
+							padding-top: 2rem;
 							font-family: "Raleway", Helvetica, sans-serif;
 							font-size: 1.2rem;
 							font-weight: 100;
@@ -4819,9 +4882,7 @@ nav .menucopyright a{
 							}
 	
 					#wrapper > section.feed > .content {
-						
 						width:100vw;
-						margin-top: 3rem;
 						background-color: var(--primary-color);
 						}
 
@@ -4837,7 +4898,7 @@ nav .menucopyright a{
 					top: 0;
 					left: 0;
 					width: 100vw;
-					height: 3rem;
+					height: 5rem;
 					-webkit-text-fill-color: var(--third-color);
 					background-color: var(--brightgrey);
 					z-index: 1;
@@ -4845,7 +4906,7 @@ nav .menucopyright a{
 
 					#wrapper section.one_column > header h2 {
 						top: 0;
-						padding: 1rem;
+						padding-top: 2rem;
 						font-family: "Raleway", Helvetica, sans-serif;
 						font-size: 1.2rem;
 						font-weight: 100;
@@ -4873,7 +4934,7 @@ nav .menucopyright a{
 					#wrapper > section.one_column > .content {
 						width: 100vw;
 						/* height: 310vh; */
-						margin-top: 3rem;
+						margin-top: 4rem;
 						background-color: var(--brightgrey);
 						-webkit-text-fill-color: black;
 						text-align: left;
@@ -5052,14 +5113,14 @@ nav .menucopyright a{
 				top: 0;
 				left: 0;
 				width: 100vw;
-				height: 3rem;
+				height: 5rem;
 				/* -webkit-text-fill-color: white; */
 				background-color: var(--primary-color);
 				}
 
 				#wrapper section.contact > header h2 {
 					top: 0;
-					padding: 1rem;
+					padding-top: 2rem;
 					font-family: "Raleway", Helvetica, sans-serif;
 					font-size: 1.2rem;
 					font-weight: 100;
@@ -5067,7 +5128,7 @@ nav .menucopyright a{
 					line-height: 100%;
 					text-transform: uppercase;
 					text-align: center;
-					color: black;
+					color: white;
 				}
 
 				#wrapper > section.contact > header:before {
@@ -5088,7 +5149,7 @@ nav .menucopyright a{
 					width: 100vw;
 					/* width: calc(100vw - 1rem); */
 					padding: 0;
-					top: 3rem; /*After Header*/
+					top: 5rem; /*After Header*/
 				}
 				#wrapper > section.contact > .content > .fields > .field.half {
 					width: auto;
@@ -5098,7 +5159,7 @@ nav .menucopyright a{
 			#wrapper > section.contact > footer {
 					background-color: var(--brightgrey);
 					display: block;
-					padding-top:  4rem;
+					padding-top:  6rem;
 					text-align: center;				
 				}
 				#wrapper > section.contact > footer > .items{

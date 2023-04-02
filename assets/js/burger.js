@@ -5,7 +5,7 @@ $(".burger, .overlay").click(function () {
     $("body").toggleClass("overflow");
   });
 
-$(".main").click(function () {
+$(".main, .main_mobil").click(function () {
     $(".burger").toggleClass("clicked"); //Zeigt Kreut bei Klick auf Burger
     $(".overlay").toggleClass("show"); //Zeigt Overlay bei Klick auf Burger
     $("nav").toggleClass("show"); //Zeigt Menüband bei Klick auf Burger
