@@ -2883,7 +2883,7 @@ nav ul.main_mobil {
 	font-family: Raleway, Helvetica, sans-serif; 
 	font-weight:600; 
 	letter-spacing: 0.175em; 
-	line-height: 3.5;
+	line-height: 3;
 	margin: 0 0 1.5rem 0;
 	text-transform: uppercase;
 	}
@@ -2895,10 +2895,10 @@ nav ul.main_mobil {
 	  -o-transform: translateX(40px);
 	  transform: translateX(40px);
 	  opacity: 0;
-	  -webkit-transition: all 0.3s ease;
+	  /* -webkit-transition: all 0.3s ease;
 	  -moz-transition: all 0.3s ease;
 	  -o-transition: all 0.3s ease;
-	  transition: all 0.3s ease;
+	  transition: all 0.3s ease; */
 	}
 	nav ul.main_mobil li:last-of-type {
 	  margin-bottom: 0px;
