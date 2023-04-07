@@ -4213,6 +4213,7 @@ nav .menucopyright a{
 
 				#wrapper > section.calendar_start > .content {
 					/* height: 50vh; */
+					display: none;
 				}
 
 
