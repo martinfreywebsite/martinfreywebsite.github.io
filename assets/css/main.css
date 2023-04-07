@@ -4127,9 +4127,9 @@ nav .menucopyright a{
 		
 		
 						#wrapper > section.feed > .content {
-							/* height: 60vh; */
+							
 							max-width: none;
-							/* padding-top: 10%; */
+							padding-top: 1rem;
 							}
 
 
@@ -5246,6 +5246,9 @@ nav .menucopyright a{
 		background-color: white;
 	}
 		#newpage > h2 {
+			text-align: center;
+		}
+		#newpage > section > h2 {
 			text-align: center;
 		}
 

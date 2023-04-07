@@ -82,20 +82,24 @@
 
 
 
+		<!-- Cookie consent by https://www.osano.com/cookieconsent/download/ -->
 		<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 		<script>
-		window.cookieconsent.initialise({
-		"palette": {
-			"popup": {
-			"background": "#cdcdcd"
+			window.cookieconsent.initialise({
+			"palette": {
+				"popup": {
+				"background": "#cdcdcd"
+				},
+				"button": {
+				"background": "#a3bc9c"
+				}
 			},
-			"button": {
-			"background": "#a3bc9c"
+			"theme": "edgeless",
+			"type": "opt-out",
+			"content": {
+				"href": "datenschutz.html#cookies"
 			}
-		},
-		"theme": "edgeless",
-		"type": "opt-out"
-		});
+			});
 		</script>
 		
 	</body>
