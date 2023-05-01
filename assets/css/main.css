@@ -9,7 +9,7 @@
 	--secondary-color: #ffffff;
 	--brightgrey: #cdcdcd; /*rgb(170, 170, 170);*/
 	--third-color: black;
-	--red-color: #c96464;
+	--blue-color: #536aeb;
 
 }
 
@@ -215,7 +215,7 @@ input, select, textarea {
 	result {
 		text-align: block;
 		margin: 0 0 2rem 0;
-		color:var(--red-color);
+		color:var(--blue-color);
 	}
 
 	h1, h2, h3, h4, h5, h6 {
