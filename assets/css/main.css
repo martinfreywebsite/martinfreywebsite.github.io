@@ -4281,7 +4281,7 @@ nav .menucopyright a{
 						top: calc(2.5rem - 0.5rem); /*center text vertically*/
 					}
 					#wrapper > section.calendar > .content2 {
-						padding: 0rem 0rem 0rem 3rem;
+						padding: 0rem 1rem 0rem 3rem;
 						text-align: left;
 						height: 5rem;
 						top: calc(2.5rem - 0.5rem);
